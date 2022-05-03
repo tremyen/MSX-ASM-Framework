@@ -17,6 +17,7 @@ org romArea
 ; =============================================================================
 startCode:  
   call Inicializar         	; Inicializar o ambiente do jogo
+  call TSTSCR               ; TESTA O SETUP DA TELA 
 GameLoop:
 FrameDraw:
   xor a 						        ; zero A
@@ -29,6 +30,7 @@ EndGame:
   jp startCode				      ; recomeca o jogo
 
 include "INIT.ASM"
+include "TST\TSTSCR.ASM"
 
 ; =============================================================================
 ; FIM PROGRAMA
