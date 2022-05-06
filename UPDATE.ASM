@@ -1,4 +1,9 @@
-LeftRightMove:
+; =============================================================================
+; Update objects states
+; =============================================================================
+;  (C) 2022 Manoel Neto - tremyen@gmail.com
+; =============================================================================
+UpdateState:
     ld a,0
     call ReadSprite
     ld a,e
@@ -19,4 +24,3 @@ MoveDirection:
     ld c,e  ; C => Coordenada X
     call MoveSprite
 ret
-

@@ -1,11 +1,11 @@
 ; =============================================================================
-; Inicializar o viewport do jogo
+; Ininitialize MSX in graphics mode
 ; =============================================================================
 ; (C) 2022 Manoel Neto - tremyen@gmail.com;  
 ; =============================================================================
-Inicializar:
+Init:
   ; ===========================================================================
-  ; Ajusto o MSX para PAL ou NTSC
+  ; adjust MSX PAL or NTSC
   ; ===========================================================================
   ld a,NTSC               ; a princípio eh NTSC
   ld (vdpCycle1),a        ; carrego o valor 1/10s (1 ciclo de VDP)

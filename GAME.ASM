@@ -16,23 +16,21 @@ org romArea
 ; INICIO PROGRAMA
 ; =============================================================================
 startCode:  
-  call Inicializar         	; Inicializar o ambiente do jogo
-  call TSTSCR               ; TESTA O SETUP DA TELA 
-GameInit:
-FrameDraw:
-  call LeftRightMove
-  xor a 						        ; zero A
-  ld (JIFFY),a				      ; zero o incremento do VDP
-  ld a,(vdpCycle1)			    ; carrego 1/10s
-  ld b,a						        ; carrego 1/10s em b
-  call PauseVDP             ; aguardo 1/10s
-  jp FrameDraw			        ; loop de desenho do frame
+  call Init         	      ; Initialize MSX in graphics mode
+  call TSTSCR               ; Framework Test
+GameLoop:
+  call EventHandler         ; Handle game events
+  call UpdateState          ; Update objects 
+  call Render               ; Render frame 
+  jp GameLoop			          ; loop de desenho do frame
 EndGame:
   jp startCode				      ; recomeca o jogo
 
 include "INIT.ASM"
+include "EVHNDLR.ASM"
+include "UPDATE.ASM"
+include "RENDER.ASM"
 include "TST\TSTSCR.ASM"
-include "TST\TSTMVM.ASM"
 
 ; =============================================================================
 ; FIM PROGRAMA

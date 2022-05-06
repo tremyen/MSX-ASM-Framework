@@ -2,7 +2,7 @@
 ; TSTSCR.ASM
 ; ========================================
 ; (C) 2022 Manoel Neto - tremyen@gmail.com
-; TESTA A FRAMEWORK 
+; Test puting a sprite 
 ; ========================================
 TSTSCR:
     ld a,0      ; A => Numero do Sprite na tabela de atributos
