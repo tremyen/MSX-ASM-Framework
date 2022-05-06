@@ -9,4 +9,5 @@ NumDezenas:  	  equ ramArea+2  ; Usada em PrintNumber
 NumUnidades: 	  equ ramArea+3  ; Usada em PrintNumber
 vdpCycle1:        equ ramArea+4  ; Calculo de um ciclo de VPD
 vdpCycle5:        equ ramArea+5  ; Calculo de cinco ciclos de VPD
+HeroVelocity      equ ramArea+6  ; Velocidade do Heroi
 ; =============================================================================
