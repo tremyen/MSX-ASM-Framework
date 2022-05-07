@@ -201,11 +201,11 @@ ret
 ; E000CCCC					=> EARLY / 000 / COR DO SPRITE
 ; =============================================================================
 ; Parametros
-; A => Numero do Sprite na tabela de atributos
 ; D => posicao Y
 ; E => posicao X
 ; B => Numero do sprite na tabela de sprites
 ; C => Early / Cor
+; A => Numero do Sprite na tabela de atributos
 ; =============================================================================
 ; ALTERA => Nada
 ; =============================================================================

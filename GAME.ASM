@@ -17,7 +17,7 @@ org romArea
 ; =============================================================================
 startCode:  
   call Init         	      ; Initialize MSX in graphics mode
-  call TSTSCR               ; Framework Test
+  call PutObjects           ; Set objects
 GameLoop:
   call EventHandler         ; Handle game events
   call UpdateState          ; Update objects 
@@ -27,11 +27,10 @@ EndGame:
   jp startCode				      ; recomeca o jogo
 
 include "INIT.ASM"
+include "OBJECTS.ASM"
 include "EVHNDLR.ASM"
 include "UPDATE.ASM"
 include "RENDER.ASM"
-include "TST\TSTSCR.ASM"
-
 ; =============================================================================
 ; FIM PROGRAMA
 ; =============================================================================
@@ -48,3 +47,4 @@ include "HARDWARE\KEYBOARD.ASM"
 ; =============================================================================
 romPad:
  ds romSize-(romPad-romArea),0
+; =============================================================================
