@@ -1,5 +1,5 @@
 ; =============================================================================
-;  <NomeDoJogo> 1.0
+;  <GameName> 1.0
 ; =============================================================================
 ;  (C) 2022 Manoel Neto - tremyen@gmail.com
 ; =============================================================================
@@ -13,7 +13,7 @@ org romArea
   db "AM01"                 ; string de identificação
   ds 6,0
 ; =============================================================================
-; INICIO PROGRAMA
+; Program Start
 ; =============================================================================
 startCode:  
   call Init         	      ; Initialize MSX in graphics mode
@@ -22,15 +22,16 @@ GameLoop:
   call EventHandler         ; Handle game events
   call UpdateState          ; Update objects 
   call Render               ; Render frame 
-  jp GameLoop			          ; loop de desenho do frame
+  jp GameLoop			          ; GameLoop
 EndGame:
-  jp startCode				      ; recomeca o jogo
+  jp startCode				      ; restart game
 
 include "INIT.ASM"
 include "OBJECTS.ASM"
 include "EVHNDLR.ASM"
 include "UPDATE.ASM"
 include "RENDER.ASM"
+include "CLDETECT.ASM"
 ; =============================================================================
 ; FIM PROGRAMA
 ; =============================================================================

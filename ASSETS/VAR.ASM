@@ -10,5 +10,5 @@ vdpCycle1:          equ ramArea+4  ; VPD Cycle calculation
 vdpCycle5:          equ ramArea+5  ; VPD Cycle calculation
 HeroXPos:           equ ramArea+6  ; Hero X position
 HeroYPos:           equ ramArea+7  ; Hero Y position
-HeroVelocity        equ ramArea+7  ; Hero Velocity
+HeroVelocity        equ ramArea+8  ; Hero Velocity
 ; =============================================================================
