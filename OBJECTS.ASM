@@ -12,7 +12,8 @@ PutObjects:
     ld a,127 
     ld (HeroXPos),a         ; Set hero initial x
     ld a,3
-    ld (HeroVelocity),a     ; Set hero initial velocity
+    ld (HeroXVel),a         ; Set hero initial x velocity
+    ld (HeroYVel),a         ; Set hero initial y velocity
     ; ========================================
     ld a,(HeroYPos)
     ld d,a                  ; D => posicao Y
