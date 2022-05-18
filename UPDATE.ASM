@@ -35,9 +35,9 @@ UpdateState:
     ; ========================================
     ; Set Hero animation sprite right
     ; ========================================
-    ld a,1                  ; set right sprite 1
+    ld a,0                  ; set right sprite 1
     ld (HeroSprite1),a      ;
-    ld a,2                  ; set right sprite 2
+    ld a,1                  ; set right sprite 2
     ld (HeroSprite2),a      ;
     jp DesenharSprite
     ; ========================================
@@ -47,7 +47,7 @@ SpriteLeft:
     ; ========================================
     ld a,3                  ; set right sprite 1
     ld (HeroSprite1),a      ;
-    ld a,4                  ; set right sprite 2
+    ld a,3                  ; set right sprite 2
     ld (HeroSprite2),a      ;
     ; ========================================
 DesenharSprite:
