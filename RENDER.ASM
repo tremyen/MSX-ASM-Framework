@@ -7,12 +7,31 @@ Render:
   ; =========================================
   ; Move Hero 
   ; =========================================
-  ld a,(HeroXPos)
-  ld c,a                ; C => Coordenada X
-  ld a,(HeroYPos)
-  ld b,a                ; B => Coordenada Y  
-  ld a,0                ; A => Sprite a ser movido (tabela de atributos)
-  call MoveSprite  
+  ;=============================
+  	; Coloca Sprite cor 8
+  	;=============================
+    ld a,(HeroYPos)
+    ld d,a                  ; D => posicao Y
+    ld a,(HeroXPos)
+    ld e,a                  ; E => posicao X
+    ld a,0 
+    ld b,a                  ; B => Numero do sprite na tabela de sprites
+    ld c,8                  ; C => Early / Cor
+	ld a,(HeroSprite1)      ; A => Numero do Sprite na tabela de atributos
+  	call PutSprite
+	;=============================
+ 	; Coloca Sprite cor 15
+ 	;=============================
+    ld a,(HeroYPos)
+    ld d,a                  ; D => posicao Y
+    ld a,(HeroXPos)
+    ld e,a                  ; E => posicao X
+    ld a,4  
+    ld b,a                  ; B => Numero do sprite na tabela de sprites
+  	ld c,15                 ; C => Early / Cor
+	ld a,(HeroSprite2)      ; A => Numero do Sprite na tabela de atributos
+    call PutSprite
+    ; ============================
   ; =========================================
   ; Frame Adjustment
   ; =========================================

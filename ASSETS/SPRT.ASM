@@ -22,6 +22,7 @@ SPRITES:
     DB $FD,$FB,$F7,$FF,$7F,$3F,$1F,$0F
     DB $F0,$F8,$FC,$FE,$1F,$9F,$5F,$FF
     DB $FF,$FF,$FF,$FF,$FE,$FC,$F8,$F0
+    ; --- Slot 1
     ; color 15
     DB $00,$00,$00,$00,$00,$00,$00,$01
     DB $02,$04,$08,$00,$00,$00,$00,$00
@@ -34,6 +35,7 @@ SPRITES:
     DB $FE,$FF,$FF,$FF,$7F,$3F,$1F,$0F
     DB $F0,$F8,$FC,$FE,$FF,$FF,$FF,$FF
     DB $FF,$7F,$BF,$DF,$FE,$FC,$F8,$F0
+    ; --- Slot 3
     ; color 15
     DB $00,$00,$00,$00,$00,$0E,$0C,$0A
     DB $01,$00,$00,$00,$00,$00,$00,$00

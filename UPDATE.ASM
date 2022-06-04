@@ -45,37 +45,13 @@ SpriteLeft:
     ; ========================================
     ; Set Hero animation sprite left 
     ; ========================================
-    ld a,3                  ; set right sprite 1
+    ld a,2                  ; set right sprite 1
     ld (HeroSprite1),a      ;
     ld a,3                  ; set right sprite 2
     ld (HeroSprite2),a      ;
     ; ========================================
 DesenharSprite:
-  	;=============================
-  	; Coloca Sprite cor 8
-  	;=============================
-    ld a,(HeroYPos)
-    ld d,a                  ; D => posicao Y
-    ld a,(HeroXPos)
-    ld e,a                  ; E => posicao X
-    ld a,(HeroSprite1)  
-    ld b,a                  ; B => Numero do sprite na tabela de sprites
-    ld c,8                  ; C => Early / Cor
-	ld a,(HeroSprite1)      ; A => Numero do Sprite na tabela de atributos
-  	call PutSprite
-	;=============================
- 	; Coloca Sprite cor 15
- 	;=============================
-    ld a,(HeroYPos)
-    ld d,a                  ; D => posicao Y
-    ld a,(HeroXPos)
-    ld e,a                  ; E => posicao X
-    ld a,(HeroSprite2)  
-    ld b,a                  ; B => Numero do sprite na tabela de sprites
-  	ld c,15                 ; C => Early / Cor
-	ld a,(HeroSprite2)      ; A => Numero do Sprite na tabela de atributos
-    call PutSprite
-    ; ============================
+  	
     
     ; ========================================
     ; Detect Colisions
