@@ -12,6 +12,7 @@ HeroXPos:           equ ramArea+6   ; Hero X position
 HeroYPos:           equ ramArea+7   ; Hero Y position
 HeroXVel:           equ ramArea+8   ; Hero X velocity
 HeroYVel:           equ ramArea+9   ; Hero Y velocity
-HeroSprite1:        equ ramArea+10  ; Hero animation sprite 1
-HeroSprite2:        equ ramArea+11  ; Hero animation sprite 2
+HeroFlags:          equ ramArea+10  ; XXXXXX00 => BIT 0 LEFT/RIGHT, BIT 1 UP/DOWN
+HeroSprite1:        equ ramArea+11  ; Hero animation sprite 1
+HeroSprite2:        equ ramArea+12  ; Hero animation sprite 2
 ; =============================================================================

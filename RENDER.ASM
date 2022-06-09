@@ -8,30 +8,33 @@ Render:
   ; Move Hero 
   ; =========================================
   ;=============================
-  	; Coloca Sprite cor 8
-  	;=============================
-    ld a,(HeroYPos)
-    ld d,a                  ; D => posicao Y
-    ld a,(HeroXPos)
-    ld e,a                  ; E => posicao X
-    ld a,0 
-    ld b,a                  ; B => Numero do sprite na tabela de sprites
-    ld c,8                  ; C => Early / Cor
+  ; Coloca Sprite cor 8
+  ;=============================
+  ld a,(HeroYPos)
+  ld d,a                  ; D => posicao Y
+  ld a,(HeroXPos)
+  ld e,a                  ; E => posicao X
+  ld a,0 
+  ld b,a                  ; B => Numero do sprite na tabela de sprites
+  ld c,8                  ; C => Early / Cor
 	ld a,(HeroSprite1)      ; A => Numero do Sprite na tabela de atributos
-  	call PutSprite
+  call PutSprite
+  ; ============================
+  
 	;=============================
  	; Coloca Sprite cor 15
  	;=============================
-    ld a,(HeroYPos)
-    ld d,a                  ; D => posicao Y
-    ld a,(HeroXPos)
-    ld e,a                  ; E => posicao X
-    ld a,4  
-    ld b,a                  ; B => Numero do sprite na tabela de sprites
-  	ld c,15                 ; C => Early / Cor
+  ld a,(HeroYPos)
+  ld d,a                  ; D => posicao Y
+  ld a,(HeroXPos)
+  ld e,a                  ; E => posicao X
+  ld a,4  
+  ld b,a                  ; B => Numero do sprite na tabela de sprites
+  ld c,15                 ; C => Early / Cor
 	ld a,(HeroSprite2)      ; A => Numero do Sprite na tabela de atributos
-    call PutSprite
-    ; ============================
+  call PutSprite
+  ; ============================
+
   ; =========================================
   ; Frame Adjustment
   ; =========================================
